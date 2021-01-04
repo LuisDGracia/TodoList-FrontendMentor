@@ -1,4 +1,5 @@
 import React from 'react'
+import DeleteButtons from '../../UI/DeleteButton'
 import RoundButtons from '../../UI/RoundButtons'
 import { Item } from './TodoItemStyled'
 
@@ -7,6 +8,7 @@ function TodoItem() {
     <Item>
       <RoundButtons />
       Some li
+      <DeleteButtons />
     </Item>
   )
 }
