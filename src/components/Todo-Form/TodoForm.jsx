@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import NewTodo from '../New-Todo/NewTodo'
 import TodoBody from '../Todo-Body/TodoBody'
 import TodoFilters from '../Todo-Filters/TodoFilters'
@@ -6,12 +6,15 @@ import TodoHeader from '../Todo-Header/TodoHeader'
 import { Container } from './Todo-FormStyled'
 
 function TodoForm() {
+
+  const [todo, setTodo] = useState([{ done: false, value:'First Todo' }])
+
   return (
     <Fragment>
       <Container>
         <TodoHeader />
-        <NewTodo />
-        <TodoBody />
+        <NewTodo  todo={ todo } setTodo={ setTodo } />
+        <TodoBody todo={ todo } />
         <TodoFilters />
       </Container>
     </Fragment>

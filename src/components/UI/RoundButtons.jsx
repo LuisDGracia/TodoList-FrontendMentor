@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function RoundButtons() {
+function RoundButtons({ clicked }) {
   return (
-    <DoneBtn for="Done">
+    <DoneBtn htmlFor="Done" onClick={ clicked } >
       <DoneCheck type="checkbox" name="done" id="Done" />
     </DoneBtn>
   )

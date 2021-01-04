@@ -2,14 +2,14 @@ import React from 'react'
 import TodoItem from './TodoItem/TodoItem'
 import { TodoList } from './TodoItemsStyled'
 
-function TodoItems() {
+function TodoItems({ todos }) {
   return (
     <TodoList>
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      {
+        todos.map( todo => {
+          return <TodoItem value={todo.value} />
+        })
+      }
     </TodoList>
   )
 }

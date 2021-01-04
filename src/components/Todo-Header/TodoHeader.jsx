@@ -6,7 +6,7 @@ function TodoHeader() {
   return (
     <HeaderContainer>
       <HeaderTitle >TODO</HeaderTitle>
-      <ThemeChanger for="themer" >
+      <ThemeChanger htmlFor="themer" >
         <ThemeButton src={ sun } />
         <Checkbox type="checkbox" id="themer" name="HeaderCheckbox" />
       </ThemeChanger>

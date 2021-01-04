@@ -2,10 +2,10 @@ import React from 'react'
 import TodoItems from '../TodoItems/TodoItems'
 import { BodyContainer } from './TodoBody-Styled'
 
-function TodoBody() {
+function TodoBody({ todo }) {
   return (
     <BodyContainer>
-      <TodoItems />
+      <TodoItems todos={todo} />
     </BodyContainer>
   )
 }

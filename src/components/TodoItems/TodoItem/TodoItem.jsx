@@ -3,11 +3,11 @@ import DeleteButtons from '../../UI/DeleteButton'
 import RoundButtons from '../../UI/RoundButtons'
 import { Item, Text } from './TodoItemStyled'
 
-function TodoItem() {
+function TodoItem({ value }) {
   return (
     <Item>
       <RoundButtons />
-      <Text>Some Li</Text>
+      <Text>{value}</Text>
       <DeleteButtons />
     </Item>
   )

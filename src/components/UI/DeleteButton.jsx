@@ -4,7 +4,7 @@ import deleteImg from '../../assets/svg/icon-cross.svg'
 
 function DeleteButtons() {
   return (
-    <DeleteBtn for="Delete">
+    <DeleteBtn htmlFor="Delete">
       <DeleteIcon src= { deleteImg } />
       <DeleteCheck type="checkbox" name="done" id="Delete" />
     </DeleteBtn>
