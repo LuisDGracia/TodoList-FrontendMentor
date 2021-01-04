@@ -15,13 +15,11 @@ function NewTodo({ todo, setTodo }) {
     }
 
     setTodo([ ...todo, Todo ])
-
-    console.log( todo );
   }
 
   return (
     <NewContainer >
-      <RoundButtons clicked={ updateTodo } />
+      <RoundButtons clicked={ updateTodo } connect="NewTodo" />
       <NewInput type="text" placeholder="Create a new todo..." id="newTodo" />
     </NewContainer>
   )

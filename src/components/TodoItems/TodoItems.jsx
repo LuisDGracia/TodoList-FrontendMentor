@@ -7,7 +7,7 @@ function TodoItems({ todos }) {
     <TodoList>
       {
         todos.map( todo => {
-          return <TodoItem value={todo.value} />
+          return <TodoItem value={todo.value} checked={todo.done} key={todo.value} />
         })
       }
     </TodoList>
