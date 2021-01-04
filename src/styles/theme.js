@@ -5,7 +5,13 @@ const theme = {
       VeryLightGrayishBlue: "hsl(236, 33%, 92%)",
       LightGrayishBlue: "hsl(233, 11%, 84%)",
       DarkGrayishBlue: "hsl(236, 9%, 61%)",
-      VeryDarkGrayishBlue: "hsl(235, 19%, 35%)"
+      VeryDarkGrayishBlue: "hsl(235, 19%, 35%)",
+      primary: {
+        colors:{
+          BrightBlue: "hsl(220, 98%, 61%)",
+          CheckBackground: "linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",
+        }
+      }
     },
     transition: "0.5s",
   },
@@ -16,17 +22,16 @@ const theme = {
       LightGrayishBlue1: "hsl(234, 39%, 85%)",
       LightGrayishBlue2: "hsl(236, 33%, 92%)", /*hover*/
       DarkGrayishBlue: "hsl(234, 11%, 52%)",
-      VeryDarkGrayishBlue1: "hsl(233, 14%, 35%)",
-      VeryDarkGrayishBlue2: "hsl(237, 14%, 26%)"
+      VeryDarkGrayishBlue: "hsl(240, 20%, 12%)",
+      primary: {
+        colors:{
+          BrightBlue: "hsl(220, 98%, 61%)",
+          CheckBackground: "linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",
+        }
+      }
     },
     transition: "0.5s",
   },
-  primary: {
-    colors:{
-      BrightBlue: "hsl(220, 98%, 61%)",
-      CheckBackground: "linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",
-    }
-  }
 };
 
 export default theme;

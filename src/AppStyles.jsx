@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const AppContainer = styled.div`
-  background-color: ${ ({ theme }) => theme.colors.VeryDarkGrayishBlue2 };
+  background-color: ${ ({ theme }) => theme.colors.VeryDarkGrayishBlue };
   height: 100vh;
 `
 
