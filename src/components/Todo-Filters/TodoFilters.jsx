@@ -1,10 +1,14 @@
 import React from 'react'
-import { FiltersContainer } from './FiltersStyled'
+import { FilterOptn, FiltersContainer, ItemsLeft, ClearBtn } from './FiltersStyled'
 
 function TodoFilters() {
   return (
     <FiltersContainer >
-      Some filters
+      <ItemsLeft >x items left</ItemsLeft>
+      <FilterOptn type="radio" name="Option" id="FilterOptn" />
+      <FilterOptn type="radio" name="Option" id="FilterOptn" />
+      <FilterOptn type="radio" name="Option" id="FilterOptn" />
+      <ClearBtn >Clear Completed</ClearBtn>
     </FiltersContainer>
   )
 }
