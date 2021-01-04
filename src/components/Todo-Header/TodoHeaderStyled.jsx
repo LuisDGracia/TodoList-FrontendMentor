@@ -10,9 +10,17 @@ export const HeaderContainer = styled.div`
 `;
 
 export const HeaderTitle = styled.h1`
+  color: #fff;
   margin: 0;
 `;
 
 export const ThemeChanger = styled.label``;
 
-export const Checkbox = styled.input``;
+export const ThemeButton = styled.img``
+
+export const Checkbox = styled.input`
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  visibility: hidden;
+`;
