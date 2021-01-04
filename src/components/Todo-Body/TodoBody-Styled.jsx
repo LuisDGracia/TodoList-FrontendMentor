@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const BodyContainer = styled.div`
+  background-color: ${ ({ theme }) => { return theme.colors.VeryDarkDesaturatedBlue} };
   width: 100%;
-  border: 1px solid black;
   margin-top: 20px;
+  border-radius: 5px 5px 0 0;
 `

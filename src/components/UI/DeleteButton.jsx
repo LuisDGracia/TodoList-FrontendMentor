@@ -13,7 +13,7 @@ function DeleteButtons() {
 
 const DeleteBtn = styled.label`
   position: absolute;
-  right: 0;
+  right: 20px;
 `;
 
 const DeleteCheck = styled.input`
