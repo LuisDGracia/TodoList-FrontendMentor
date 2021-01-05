@@ -7,14 +7,14 @@ import { Container } from './Todo-FormStyled'
 
 function TodoForm() {
 
-  const [todo, setTodo] = useState([{ done: false, value:'First Todo' }])
+  const [todo, setTodo] = useState([{ done: false, value: "First Todo" }])
 
   return (
     <Fragment>
       <Container>
         <TodoHeader />
         <NewTodo  todo={ todo } setTodo={ setTodo } />
-        <TodoBody todo={ todo } />
+        <TodoBody todo={ todo } setTodo={ setTodo } />
         <TodoFilters />
       </Container>
     </Fragment>

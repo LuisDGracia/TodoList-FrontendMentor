@@ -3,22 +3,12 @@ import DeleteButtons from '../../UI/DeleteButton'
 import RoundButtons from '../../UI/RoundButtons'
 import { Item, Text } from './TodoItemStyled'
 
-function TodoItem({ value, checked }) {
-
-  let newCheck = checked;
-
-  const checkHandler = ( event ) =>{
-  }
-
-  const onChangeHandler = ( event ) => {
-    newCheck = document.getElementById(value).checked
-  }
-
+function TodoItem({ value, checked, change, click }) {
   return (
     <Item>
-      <RoundButtons checked={newCheck} connect={value} clicked={ checkHandler } change={onChangeHandler} />
-      <Text>{value}</Text>
-      <DeleteButtons />
+      <RoundButtons checked={checked} connect={value} change={change} />
+      <Text done={checked} >{value}</Text>
+      <DeleteButtons click={click} />
     </Item>
   )
 }

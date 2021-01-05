@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 import deleteImg from '../../assets/svg/icon-cross.svg'
 
-function DeleteButtons() {
+function DeleteButtons({ click }) {
   return (
-    <DeleteBtn htmlFor="Delete">
-      <DeleteIcon src= { deleteImg } />
+    <DeleteBtn htmlFor="Delete" >
+      <DeleteIcon src= { deleteImg } onMouseDown={click} />
       <DeleteCheck type="checkbox" name="done" id="Delete" />
     </DeleteBtn>
   )

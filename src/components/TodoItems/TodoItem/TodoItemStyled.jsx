@@ -9,8 +9,9 @@ export const Item = styled.li`
 `;
 
 export const Text = styled.p`
-  color: white;
+  color: ${ props => props.done ? "hsl(0, 0%, 40%)" : "white" };
   margin: 0;
   margin-left: 20px;
   font-weight: 300;
+  text-decoration: ${ props => props.done ? "line-through" : "none" };
 `;

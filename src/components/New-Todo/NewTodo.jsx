@@ -4,7 +4,7 @@ import { NewContainer, NewInput } from './NewTodoStyled'
 
 function NewTodo({ todo, setTodo }) {
 
-  const updateTodo = ( event ) => {
+  const addTodo = ( event ) => {
     event.preventDefault();
 
     const todoValue = document.getElementById('newTodo').value
@@ -19,7 +19,7 @@ function NewTodo({ todo, setTodo }) {
 
   return (
     <NewContainer >
-      <RoundButtons clicked={ updateTodo } connect="NewTodo" />
+      <RoundButtons clicked={ addTodo } connect="NewTodo" />
       <NewInput type="text" placeholder="Create a new todo..." id="newTodo" />
     </NewContainer>
   )
