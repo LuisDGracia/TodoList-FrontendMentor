@@ -7,7 +7,7 @@ import { Container } from './Todo-FormStyled'
 
 function TodoForm() {
 
-  const [todo, setTodo] = useState([{ done: false, value: "First Todo" }])
+  const [todo, setTodo] = useState([{ id: 0, done: false, value: "First Todo", visible: false }])
 
   return (
     <Fragment>
@@ -15,7 +15,7 @@ function TodoForm() {
         <TodoHeader />
         <NewTodo  todo={ todo } setTodo={ setTodo } />
         <TodoBody todo={ todo } setTodo={ setTodo } />
-        <TodoFilters />
+        <TodoFilters todo={ todo } setTodo={ setTodo } />
       </Container>
     </Fragment>
   )

@@ -4,9 +4,9 @@ import { TodoList } from './TodoItemsStyled'
 
 function TodoItems({ todos, setTodo }) {
 
-  const onChangeHandler = ( checked, value ) =>{
+  const onChangeHandler = ( id, checked ) =>{
     let newTodos = todos
-    let todoPos = todos.findIndex( id => id.value === value );
+    let todoPos = todos.findIndex( todo => todo.id === id );
 
     if( todoPos !== -1 ){
       let temp = todos[todoPos];
@@ -17,9 +17,9 @@ function TodoItems({ todos, setTodo }) {
     }
   }
 
-  const deleteTodoHandler = ( status, value ) => {
+  const deleteTodoHandler = ( id ) => {
     let newTodos = todos
-    let todoPos = todos.findIndex( todo => todo.value === value )
+    let todoPos = todos.findIndex( todo => todo.id === id )
 
     newTodos.splice(todoPos, 1)
 
@@ -30,14 +30,17 @@ function TodoItems({ todos, setTodo }) {
     <TodoList>
       {
         todos.map( todo => {
-          return (
-            <TodoItem 
-              value={todo.value} 
-              checked={todo.done} 
-              key={todo.value} 
-              change={ () => onChangeHandler( todo.done, todo.value ) }
-              click = { () => deleteTodoHandler( todo.done, todo.value ) } />
-          )
+          if( todo.visible ){
+            return (
+              <TodoItem 
+                value={todo.value} 
+                checked={todo.done} 
+                key={todo.id}
+                id={todo.id}
+                change={ () => onChangeHandler( todo.id, todo.done ) }
+                click = { () => deleteTodoHandler( todo.id ) } />
+            )
+          }else return <></>
         })
       }
     </TodoList>

@@ -8,13 +8,21 @@ function NewTodo({ todo, setTodo }) {
     event.preventDefault();
 
     const todoValue = document.getElementById('newTodo').value
+    const newId = Math.floor( Math.random() * 10000000 )
+
 
     const Todo = {
+      id: newId,
       done: false,
-      value: todoValue
+      value: todoValue,
+      visible: true,
     }
+    
+    if( Todo.value === "" ){
 
-    setTodo([ ...todo, Todo ])
+    }else{
+      setTodo([ ...todo, Todo ])
+    }
   }
 
   return (
