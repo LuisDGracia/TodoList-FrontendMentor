@@ -5,7 +5,7 @@ import theme from './styles/theme'
 export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [ themeMode, setThemeMode ] = useState("darkTheme");
+  const [ themeMode, setThemeMode ] = useState("lightTheme");
   const toggleTheme = () => {
     setThemeMode((prevState) => {
       if (prevState === "lightTheme") {

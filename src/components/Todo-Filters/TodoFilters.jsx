@@ -1,5 +1,6 @@
 import React from 'react'
-import { FilterOptn, FiltersContainer, ItemsLeft, ClearBtn } from './FiltersStyled'
+import { FiltersContainer, ItemsLeft, ClearBtn } from './FiltersStyled'
+import FilterBtn from './FilterBtn/FilterBtn'
 
 function TodoFilters({ todo, setTodo }) {
 
@@ -79,20 +80,11 @@ function TodoFilters({ todo, setTodo }) {
   return (
     <FiltersContainer >
       <ItemsLeft >{ todo.length } items left</ItemsLeft>
-      <FilterBtn action="All" clicked={ () => filterHandler("All") } />
+      <FilterBtn action="All" clicked={ () => filterHandler("All") } checked="checked" />
       <FilterBtn action="Active" clicked={ () => filterHandler("Active") } />
       <FilterBtn action="Completed" clicked={ () => filterHandler("Completed") } />
       <ClearBtn onClick={ () => filterHandler("Clear") } >Clear Completed</ClearBtn>
     </FiltersContainer>
-  )
-}
-
-function FilterBtn({ action, clicked }){
-  return(
-    <label htmlFor={action} onClick={ clicked } >
-      <p style={{"display": "inline-block", "color": "white" }} >{action}</p>
-      <FilterOptn type="radio" name="Option" id={action} />
-    </label>
   )
 }
 

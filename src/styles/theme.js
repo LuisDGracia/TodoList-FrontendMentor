@@ -3,9 +3,8 @@ const theme = {
     colors: {
       VeryLightGray: "hsl(0, 0%, 98%)",
       VeryLightGrayishBlue: "hsl(236, 33%, 92%)",
-      LightGrayishBlue: "hsl(233, 11%, 84%)",
-      DarkGrayishBlue: "hsl(236, 9%, 61%)",
-      VeryDarkGrayishBlue: "hsl(235, 19%, 35%)",
+      TextColor: "hsl(233, 11%, 84%)",
+      HoverColor: "hsl(236, 9%, 61%)",
       primary: {
         colors:{
           BrightBlue: "hsl(220, 98%, 61%)",
@@ -18,11 +17,10 @@ const theme = {
   darkTheme: {
     colors: {
       VeryDarkBlue: "hsl(235, 21%, 11%)",
-      VeryDarkDesaturatedBlue: "hsl(235, 24%, 19%)",
-      LightGrayishBlue1: "hsl(234, 39%, 85%)",
-      LightGrayishBlue2: "hsl(236, 33%, 92%)", /*hover*/
-      DarkGrayishBlue: "hsl(234, 11%, 52%)",
-      VeryDarkGrayishBlue: "hsl(240, 20%, 12%)",
+      FormColor: "hsl(235, 24%, 19%)",
+      TextColor: "hsl(234, 39%, 85%)",
+      HoverColor: "hsl(236, 33%, 92%)", /*hover*/
+      BodyColor: "hsl(240, 20%, 12%)",
       primary: {
         colors:{
           BrightBlue: "hsl(220, 98%, 61%)",
