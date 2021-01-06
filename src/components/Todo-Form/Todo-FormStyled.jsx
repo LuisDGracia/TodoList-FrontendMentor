@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 40%;
   z-index:10;
-  @media screen and (max-width: 375px){
+  @media screen and (max-width: 426px){
     width: 80%;
   }
 `;
