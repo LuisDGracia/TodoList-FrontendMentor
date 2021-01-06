@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const FilterText = styled.label`
   display: inline-block;
-  color: ${ ({theme}) => theme.colors.TextColor };
+  color: ${ ({theme}) => theme.colors.DisabledTextColor };
 
   &:hover{
     color: ${ ({ theme }) => theme.colors.HoverColor };
+    cursor: pointer;
   }
 `;
 
@@ -15,9 +16,16 @@ export const FilterOptn = styled.input`
   height: -100%;
   visibility: hidden;
 
-  &:checked + label[ for="All" ],
+  &:checked + ${FilterText}[ for="All" ],
   &:checked + ${FilterText}[ for="Completed" ],
   &:checked + ${FilterText}[ for="Active" ]{
-    color: black;
+    color: ${ ({ theme }) => theme.colors.FilterActive };
   }
+`;
+
+export const FilterContainer = styled.div`
+  width: auto;
+  text-align: center;
+  font-size: 14px;
+  display: inline-block;
 `;

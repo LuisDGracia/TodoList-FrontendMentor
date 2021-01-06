@@ -14,6 +14,7 @@ function DeleteButtons({ click }) {
 const DeleteBtn = styled.label`
   position: absolute;
   right: 20px;
+  cursor: pointer;
 `;
 
 const DeleteCheck = styled.input`

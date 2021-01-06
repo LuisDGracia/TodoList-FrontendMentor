@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const BodyContainer = styled.div`
-  background-color: ${ ({ theme }) => theme.colors.BodyColor ? theme.colors.BodyColor : "white" };
   width: 100%;
   min-height: 250px;
   max-height: 250px;

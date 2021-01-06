@@ -27,6 +27,10 @@ const DoneBtn = styled.label`
     left: 5px;
     top: 0px;
   }
+
+  &:hover{
+    cursor: pointer;
+  }
 `;
 
 const DoneCheck = styled.input`

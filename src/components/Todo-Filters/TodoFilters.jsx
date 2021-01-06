@@ -1,61 +1,12 @@
 import React from 'react'
 import { FiltersContainer, ItemsLeft, ClearBtn } from './FiltersStyled'
-import FilterBtn from './FilterBtn/FilterBtn'
+import FiltersGroup from './FiltersGroup/FiltersGroup'
 
 function TodoFilters({ todo, setTodo }) {
 
   const filterHandler = ( action ) => {
 
     switch( action ){
-      case "All":
-        let allTodos = todo
-
-        allTodos.map( todo => {
-          if( !todo.visible ){
-            todo.visible = true
-          }
-
-          return todo
-        })
-
-        setTodo([ ...allTodos ])
-        break;
-
-      case "Active":
-
-        let activeTodos = todo
-
-        activeTodos.map( todo => {
-          if( !todo.done ){
-            todo.visible = true
-          }else{
-            todo.visible = false
-          }
-
-          return todo
-        })
-
-        setTodo([ ...activeTodos ])
-
-        break;
-
-      case "Completed":
-         let completeTodos = todo
-
-          completeTodos.map( todo => {
-          if( todo.done ){
-            todo.visible = true
-          }else{
-            todo.visible = false
-          }
-
-          return todo
-        })
-
-        setTodo([ ...completeTodos ])  
-
-        break;
-      
       case "Clear":
 
         let clearTodos = todo
@@ -80,9 +31,7 @@ function TodoFilters({ todo, setTodo }) {
   return (
     <FiltersContainer >
       <ItemsLeft >{ todo.length } items left</ItemsLeft>
-      <FilterBtn action="All" clicked={ () => filterHandler("All") } checked="checked" />
-      <FilterBtn action="Active" clicked={ () => filterHandler("Active") } />
-      <FilterBtn action="Completed" clicked={ () => filterHandler("Completed") } />
+      <FiltersGroup todo={todo} setTodo={setTodo} />
       <ClearBtn onClick={ () => filterHandler("Clear") } >Clear Completed</ClearBtn>
     </FiltersContainer>
   )

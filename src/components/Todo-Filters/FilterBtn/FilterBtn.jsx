@@ -1,12 +1,14 @@
 import React from 'react'
-import { FilterText, FilterOptn } from './StyledBtn'
+import { FilterText, FilterOptn, FilterContainer } from './StyledBtn'
 
-function FilterBtn({ action, clicked, checked }){
+function FilterBtn({ action, clicked }){
   return(
-    <FilterText htmlFor={action} onClick={ clicked } >
-      {action}
-      <FilterOptn type="radio" name="Option" id={action} checked={checked} />
-    </FilterText>
+    <FilterContainer >
+      <FilterOptn type="radio" name="Option" id={action} />
+      <FilterText htmlFor={action} onClick={ clicked } >
+        {action}
+      </FilterText>
+    </FilterContainer>
   )
 }
 
