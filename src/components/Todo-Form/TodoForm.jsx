@@ -3,13 +3,11 @@ import NewTodo from '../New-Todo/NewTodo'
 import TodoBody from '../Todo-Body/TodoBody'
 import TodoFilters from '../Todo-Filters/TodoFilters'
 import TodoHeader from '../Todo-Header/TodoHeader'
-import { Container, MobileFilters, TodosContainer } from './Todo-FormStyled'
+import { Container, TodosContainer } from './Todo-FormStyled'
 
 function TodoForm() {
 
   const [todo, setTodo] = useState([{ id: 0, done: false, value: "First Todo", visible: true }])
-
-  console.log( todo )
 
   return (
     <Fragment>

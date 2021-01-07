@@ -13,6 +13,3 @@ export const TodosContainer = styled.div`
   box-shadow: 0px 00px 100px -10px rgba( 0, 0, 0, 0.5); 
   border-radius: 5px;
 `;
-
-export const MobileFilters = styled.div`
-`;

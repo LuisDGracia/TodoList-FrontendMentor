@@ -11,7 +11,7 @@ import { AppContext } from './AppProvider';
 
 function App( ) {
 
-  const { toggleTheme, themeMode } = useContext(AppContext)
+  const { themeMode } = useContext(AppContext)
 
   return (
     <AppContainer>
