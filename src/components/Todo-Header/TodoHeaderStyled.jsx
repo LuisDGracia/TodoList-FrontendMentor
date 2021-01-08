@@ -12,11 +12,16 @@ export const HeaderContainer = styled.div`
 export const HeaderTitle = styled.h1`
   color: #fff;
   margin: 0;
+  cursor: default;
 `;
 
 export const ThemeChanger = styled.label``;
 
-export const ThemeButton = styled.img``
+export const ThemeButton = styled.img`
+  &:hover{
+    cursor: pointer;
+  }
+`
 
 export const Checkbox = styled.input`
   position: absolute;
